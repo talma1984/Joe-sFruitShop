@@ -11,6 +11,7 @@ class BaseLayer: UIViewController {
 private let backGroundImage = UIImageView()
     override func viewDidLoad() {
         super.viewDidLoad()
+        backGround()
     }
     //set the background image of the main screen
     func backGround(){
@@ -20,6 +21,6 @@ private let backGroundImage = UIImageView()
         backGroundImage.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         backGroundImage.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         backGroundImage.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
-        view.sendSubviewToBack(backGroundImage)
-    }
+        backGroundImage.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        view.sendSubviewToBack(backGroundImage)    }
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		040123E427BE58C200F789AA /* BaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040123E327BE58C200F789AA /* BaseLayer.swift */; };
 		047388C427BE33CC00BBF626 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047388C327BE33CC00BBF626 /* AppDelegate.swift */; };
 		047388C627BE33CC00BBF626 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047388C527BE33CC00BBF626 /* SceneDelegate.swift */; };
 		047388C827BE33CC00BBF626 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047388C727BE33CC00BBF626 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		040123E327BE58C200F789AA /* BaseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLayer.swift; sourceTree = "<group>"; };
 		047388C027BE33CB00BBF626 /* Joe'sFruitShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Joe'sFruitShop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047388C327BE33CC00BBF626 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047388C527BE33CC00BBF626 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		040123DF27BE57DC00F789AA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				047388C327BE33CC00BBF626 /* AppDelegate.swift */,
+				047388C527BE33CC00BBF626 /* SceneDelegate.swift */,
+				047388C927BE33CC00BBF626 /* Main.storyboard */,
+				047388CC27BE33D100BBF626 /* Assets.xcassets */,
+				047388CE27BE33D100BBF626 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		040123E027BE581C00F789AA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				047388C727BE33CC00BBF626 /* ViewController.swift */,
+				040123E327BE58C200F789AA /* BaseLayer.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		040123E127BE582E00F789AA /* model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		040123E227BE584200F789AA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		047388B727BE33CB00BBF626 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +93,11 @@
 		047388C227BE33CB00BBF626 /* Joe'sFruitShop */ = {
 			isa = PBXGroup;
 			children = (
-				047388C327BE33CC00BBF626 /* AppDelegate.swift */,
-				047388C527BE33CC00BBF626 /* SceneDelegate.swift */,
-				047388C727BE33CC00BBF626 /* ViewController.swift */,
-				047388C927BE33CC00BBF626 /* Main.storyboard */,
-				047388CC27BE33D100BBF626 /* Assets.xcassets */,
-				047388CE27BE33D100BBF626 /* LaunchScreen.storyboard */,
+				040123DF27BE57DC00F789AA /* Supporting Files */,
+				040123E027BE581C00F789AA /* Controller */,
 				047388D127BE33D100BBF626 /* Info.plist */,
+				040123E227BE584200F789AA /* View */,
+				040123E127BE582E00F789AA /* model */,
 			);
 			path = "Joe'sFruitShop";
 			sourceTree = "<group>";
@@ -140,6 +175,7 @@
 			files = (
 				047388C827BE33CC00BBF626 /* ViewController.swift in Sources */,
 				047388C427BE33CC00BBF626 /* AppDelegate.swift in Sources */,
+				040123E427BE58C200F789AA /* BaseLayer.swift in Sources */,
 				047388C627BE33CC00BBF626 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

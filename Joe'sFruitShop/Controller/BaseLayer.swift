@@ -11,10 +11,10 @@ class BaseLayer: UIViewController {
 private let backGroundImage = UIImageView()
     override func viewDidLoad() {
         super.viewDidLoad()
-        backGround()
+        setBackGround()
     }
     //set the background image of the main screen
-    func backGround(){
+    func setBackGround(){
         backGroundImage.image = UIImage(named: "back")
         backGroundImage.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(backGroundImage)

@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		040123E427BE58C200F789AA /* BaseLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040123E327BE58C200F789AA /* BaseLayer.swift */; };
 		040123E627BE862100F789AA /* FruitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040123E527BE862100F789AA /* FruitCell.swift */; };
+		040123E827BE9EE900F789AA /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040123E727BE9EE900F789AA /* Fruit.swift */; };
 		047388C427BE33CC00BBF626 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047388C327BE33CC00BBF626 /* AppDelegate.swift */; };
 		047388C627BE33CC00BBF626 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047388C527BE33CC00BBF626 /* SceneDelegate.swift */; };
 		047388C827BE33CC00BBF626 /* HomeScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 047388C727BE33CC00BBF626 /* HomeScreenViewController.swift */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		040123E327BE58C200F789AA /* BaseLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseLayer.swift; sourceTree = "<group>"; };
 		040123E527BE862100F789AA /* FruitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FruitCell.swift; sourceTree = "<group>"; };
+		040123E727BE9EE900F789AA /* Fruit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
 		047388C027BE33CB00BBF626 /* Joe'sFruitShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Joe'sFruitShop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		047388C327BE33CC00BBF626 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		047388C527BE33CC00BBF626 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 		040123E127BE582E00F789AA /* model */ = {
 			isa = PBXGroup;
 			children = (
+				040123E727BE9EE900F789AA /* Fruit.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				040123E827BE9EE900F789AA /* Fruit.swift in Sources */,
 				047388C827BE33CC00BBF626 /* HomeScreenViewController.swift in Sources */,
 				040123E627BE862100F789AA /* FruitCell.swift in Sources */,
 				047388C427BE33CC00BBF626 /* AppDelegate.swift in Sources */,

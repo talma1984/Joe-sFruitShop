@@ -8,8 +8,10 @@
 import UIKit
 
 class HomeScreenViewController: BaseLayer {
+    //get the fruit list from struct
+    var fruitData = Fruits.fetchFruit()
     //server adress
-    let jsonUrlString = "https://dev-api.com/fruitsBT/getFruits"
+    let apiAdress = "https://dev-api.com/fruitsBT/getFruits"
     //tableview attribiuts
     let fruitsTableView = UITableView()
     var tableViewWidth = CGFloat()
@@ -19,6 +21,7 @@ class HomeScreenViewController: BaseLayer {
         super.viewDidLoad()
         tableSize()
         setTableView()
+        getData(apiAdress)
     }
    //set the size of the table view
     func tableSize(){
@@ -29,8 +32,6 @@ class HomeScreenViewController: BaseLayer {
     func setTableView(){
         fruitsTableView.backgroundColor = .black
         view.addSubview(fruitsTableView)
-        //fruitsTableView.delegate = self
-      //  fruitsTableView.dataSource = self
         fruitsTableView.frame = CGRect(x: 50, y: 60, width: tableViewWidth, height: tableViewHeigt)
         fruitsTableView.isPagingEnabled = true
         fruitsTableView.isScrollEnabled = true
@@ -40,6 +41,24 @@ class HomeScreenViewController: BaseLayer {
         fruitsTableView.dataSource = self
     }
     //get jason from the server
+    func getData(_ link:String){
+        guard let url = URL(string: link) else{return}
+        URLSession.shared.dataTask(with: url){
+            (data, response,error)in
+            guard let data = data else {return}
+            do {
+                let fruit = try
+                JSONDecoder().decode([fruitStruct].self, from: data)
+                //empty struct
+                self.fruitsData.removeAll()
+                //fill struct whith new info
+                //self.fruitsData = fruit
+                print(fruit)
+            }catch let jsonErorr {
+                print("error serilazing json", jsonErorr)
+            }
+        }
+    }
 }
 // extension for the tableview
 extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource{

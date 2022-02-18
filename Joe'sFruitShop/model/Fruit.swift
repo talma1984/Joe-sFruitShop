@@ -18,7 +18,9 @@ struct fruitStruct: Decodable{
 //a class of fruit list's
 class Fruits{
     static func fetchFruit() ->[fruitStruct]{
-        let fr = fruitStruct(name: "avocado", image: "avocadoIma", description: "the best", price: 100)
-        return[fr]
+        let fr1 = fruitStruct(name: "avocado", image: "avocadoIma", description: "the best", price: 100)
+        let fr2 = fruitStruct(name: "avocado", image: "avocadoIma", description: "the best", price: 100)
+        let fr3 = fruitStruct(name: "avocado", image: "avocadoIma", description: "the best", price: 100)
+        return[fr1,fr2,fr3]
     }
 }

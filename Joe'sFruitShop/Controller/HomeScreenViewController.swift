@@ -16,7 +16,6 @@ class HomeScreenViewController: BaseLayer {
     let fruitsTableView = UITableView()
     var tableViewWidth = CGFloat()
     var tableViewHeigt = CGFloat()
-    var fruitsData = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableSize()
@@ -44,26 +43,28 @@ class HomeScreenViewController: BaseLayer {
     func getData(_ link:String){
         guard let url = URL(string: link) else{return}
         URLSession.shared.dataTask(with: url){
-            (data, response,error)in
+            (data, response, error)in
             guard let data = data else {return}
             do {
                 let fruit = try
                 JSONDecoder().decode([fruitStruct].self, from: data)
                 //empty struct
-                self.fruitsData.removeAll()
+                self.fruitData.removeAll()
                 //fill struct whith new info
-                //self.fruitsData = fruit
-                print(fruit)
+                self.fruitData = fruit
             }catch let jsonErorr {
                 print("error serilazing json", jsonErorr)
             }
+        }.resume()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+            self.fruitsTableView.reloadData()
         }
     }
 }
 // extension for the tableview
 extension HomeScreenViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return fruitsData.count
+        return fruitData.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
